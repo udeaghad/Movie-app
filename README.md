@@ -25,11 +25,9 @@
 - Twitter: [@RanjanAngom](https://twitter.com/RanjanAngom)
 - LinkedIn: [angom-chittaranjan](https://linkedin.com/in/angom-chittaranjan)
 
-👤 Coding Partner
+👤 Dozie Udeagha
 
-- GitHub: [@AngomRanjan](https://github.com/AngomRanjan)
-- Twitter: [@RanjanAngom](https://twitter.com/RanjanAngom)
-- LinkedIn: [angom-chittaranjan](https://linkedin.com/in/angom-chittaranjan)
+- GitHub: [@udeaghad](https://github.com/udeaghad)
 
 ## 🤝 Contributing
 
