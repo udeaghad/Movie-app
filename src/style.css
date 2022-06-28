@@ -3,3 +3,50 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+footer {
+  padding: 5px 20px;
+  flex-wrap: wrap;
+  background-color: rgb(112, 172, 112);
+}
+
+header,
+footer,
+.navbar {
+  width: 100%;
+}
+
+header,
+.brand,
+.navs,
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.navs {
+  gap: 20px;
+}
+
+.navlink {
+  color: #111;
+}
+
+.brand-name {
+  font-size: 28px;
+  padding: 0 10px;
+}
+
+#nos-species {
+  font-size: 18px;
+}
