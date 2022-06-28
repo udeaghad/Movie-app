@@ -28,6 +28,8 @@
 👤 Dozie Udeagha
 
 - GitHub: [@udeaghad](https://github.com/udeaghad)
+- Twitter: [@theodoz](https://twitter.com/theodoz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/dozie-udeagha/)
 
 ## 🤝 Contributing
 
