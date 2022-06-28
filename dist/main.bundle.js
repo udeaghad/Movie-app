@@ -125,7 +125,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _images_logo_32_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/logo-32.png */ \"./src/images/logo-32.png\");\n\n\nconst renderUI = () => {\n  document.getElementById('logo').src = _images_logo_32_png__WEBPACK_IMPORTED_MODULE_0__;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderUI);\n\n//# sourceURL=webpack://js-group-capstone/./src/modules/renders.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _images_logo_32_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/logo-32.png */ \"./src/images/logo-32.png\");\n\n\nconst renderUI = () => {\n  document.getElementById('logo').src = _images_logo_32_png__WEBPACK_IMPORTED_MODULE_0__;\n  document.querySelector('main').style.height = 'calc(100vh - 75px)';\n  document.querySelector('main').textContent = 'Hello Kanban Board!';\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderUI);\n\n//# sourceURL=webpack://js-group-capstone/./src/modules/renders.js?");
 
 /***/ }),
 
