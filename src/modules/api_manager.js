@@ -1,7 +1,7 @@
 const reqStarURL = 'https://thronesapi.com/api/v2/Characters/';
 const StarURL = new Request(reqStarURL);
 
-const InvBaseURL ='https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ds6TCr8BGZystL3mKFPz/';
+const InvBaseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ds6TCr8BGZystL3mKFPz/';
 const InvLikesUrl = new Request(`${InvBaseURL}likes/`);
 
 const getLikes = async (callBack) => {
