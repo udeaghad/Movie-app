@@ -114,6 +114,14 @@ main {
   display: flex;
 }
 
+.hearts:hover {
+  color: darkviolet;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .likes {
   text-align: right;
   margin-right: 10px;

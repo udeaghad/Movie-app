@@ -4,6 +4,20 @@ const StarURL = new Request(reqStarURL);
 const InvBaseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ds6TCr8BGZystL3mKFPz/';
 const InvLikesUrl = new Request(`${InvBaseURL}likes/`);
 
+const postLike = async (objLike) => {
+  fetch(InvLikesUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(objLike),
+  })
+    .then((response) => response.text())
+    .then((likeData) => {
+      console.log(likeData);
+    });
+};
+
 const getLikes = async (callBack) => {
   const response = await fetch(InvLikesUrl);
   const starLikes = await response.json();
@@ -16,4 +30,4 @@ const loadStarList = async (callBack) => {
   callBack(StarList);
 };
 
-export { loadStarList, getLikes };
+export { loadStarList, getLikes, postLike };
