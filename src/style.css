@@ -137,3 +137,28 @@ button:hover {
   box-shadow: 2px 2px 5px rgb(0 0 0 / 90%);
   background-color: rgb(187, 187, 250);
 }
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+  right: -100%;
+  position: fixed; 
+  height: 100vh;
+  background-color:aquamarine;
+}
+
+.show {
+    right: 0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .no-show {
+    display: none;
+  }
