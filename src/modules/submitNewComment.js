@@ -1,11 +1,10 @@
 import { InvBaseURL } from './api_manager.js';
 // implement the submit comment functionality
 const submitComment = async (e) => {
-  const  id  = e.target.id;
-console.log(id)
+  const { id } = e.target;
+
   const userName = document.querySelector('#name');
   const commentTxt = document.querySelector('#comment');
-  const actorId = document.querySelector('.actor-id');
 
   const result = await fetch(`${InvBaseURL}comments`, {
     method: 'POST',
