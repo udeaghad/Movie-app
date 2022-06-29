@@ -1,7 +1,7 @@
 const reqStarURL = 'https://thronesapi.com/api/v2/Characters/';
 const StarURL = new Request(reqStarURL);
 
-const InvBaseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ds6TCr8BGZystL3mKFPz/';
+const InvBaseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xawS6iCzVa4Gy6aUEnUI/';
 const InvLikesUrl = new Request(`${InvBaseURL}likes/`);
 
 const postLike = async (objLike) => {
@@ -30,4 +30,6 @@ const loadStarList = async (callBack) => {
   callBack(StarList);
 };
 
-export { loadStarList, getLikes, postLike };
+export {
+  loadStarList, getLikes, postLike, InvBaseURL, reqStarURL,
+};

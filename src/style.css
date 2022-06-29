@@ -34,6 +34,7 @@ footer {
   height: 50px;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
 header,
@@ -136,4 +137,58 @@ button:hover {
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(0 0 0 / 90%);
   background-color: rgb(187, 187, 250);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  top: 0;
+  right: -100%;
+  position: fixed;
+  height: 100vh;
+  background-color: aquamarine;
+  overflow: auto;
+  padding: 8%;
+  margin-right: 10%;
+  z-index: 5;
+}
+
+.overlay {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  z-index: 3;
+}
+
+.show {
+  right: 0;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  margin-right: 3%;
+  margin-top: 21px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: darkviolet;
+}
+
+.no-show {
+  display: none;
+}
+
+.star-image {
+  height: 250px;
+  width: 350px;
+  margin: 6% 10%;
 }
