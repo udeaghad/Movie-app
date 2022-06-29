@@ -147,7 +147,7 @@ button:hover {
   right: -100%;
   position: fixed;
   height: 100vh;
-  background-color: aquamarine;
+  background-color: rgb(193, 214, 252);
   overflow: auto;
   padding: 8%;
   margin-right: 10%;
@@ -192,3 +192,41 @@ button:hover {
   width: 350px;
   margin: 6% 10%;
 }
+
+li {
+  list-style: none;
+}
+
+.display-name {
+  text-align: center;
+}
+
+.actor-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 14px 0;
+}
+
+.comment-heading {
+  text-align: center;
+}
+
+.add-comment {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#name,
+#comment {
+  width: 100%;
+  font-size: 24px;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  padding: 5px;
+}
+
