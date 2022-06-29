@@ -174,9 +174,8 @@ button:hover {
   float: right;
   font-size: 35px;
   font-weight: bold;
-  margin-right: 3%; 
+  margin-right: 3%;
   cursor: pointer;
-  
 }
 
 .close:hover {
@@ -204,9 +203,9 @@ li {
 .actor-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin: 14px 0;
-    margin-left: 25%;
+  gap: 14px;
+  margin: 14px 0;
+  margin-left: 25%;
 }
 
 .comment-heading {
