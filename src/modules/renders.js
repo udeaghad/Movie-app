@@ -1,6 +1,7 @@
 import Logo from '../images/logo-32.png';
 import { loadStarList, getLikes, postLike } from './api_manager.js';
 import btnCommentClicked from './commentBtnClicked.js';
+import starCounts from './counter.js';
 
 const populateLikes = (starLikes) => {
   starLikes.forEach((star, i) => {
@@ -18,7 +19,7 @@ const btnHeartClicked = (e) => {
 };
 
 const populateStarList = (stars) => {
-  document.getElementById('throne-stars').textContent = `Characters (${stars.length})`;
+  document.getElementById('throne-stars').textContent = `Characters (${starCounts(stars)})`;
   const mainStarList = document.querySelector('main');
   stars.forEach((star) => {
     const artStars = document.createElement('article');
