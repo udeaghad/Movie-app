@@ -41,7 +41,7 @@ const btnCommentClicked = async (e) => {
             <textarea name="comment" id="comment" placeholder="Your Insight"></textarea>
         </div>
 
-        <button class='btn-comment'type='button' id='${id}'>Comment</button>
+        <button class='btn-comment'type='button' id='ID_${id}'>Comment</button>
         <span class="message"></span>
         
 
@@ -89,7 +89,7 @@ const btnCommentClicked = async (e) => {
     overlay.remove();
   });
 
-  const submitBtn = document.getElementById(`${id}`);
+  const submitBtn = document.getElementById(`ID_${id}`);
   submitBtn.addEventListener('click', submitComment);
 };
 

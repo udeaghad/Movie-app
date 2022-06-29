@@ -1,8 +1,8 @@
 import { InvBaseURL } from './api_manager.js';
 // implement the submit comment functionality
 const submitComment = async (e) => {
-  const { id } = e.target;
-
+  const  id  = e.target.id;
+console.log(id)
   const userName = document.querySelector('#name');
   const commentTxt = document.querySelector('#comment');
   const actorId = document.querySelector('.actor-id');
@@ -10,7 +10,7 @@ const submitComment = async (e) => {
   const result = await fetch(`${InvBaseURL}comments`, {
     method: 'POST',
     body: JSON.stringify({
-      item_id: `${actorId.innerHTML}`,
+      item_id: `${id}`,
       username: `${userName.value}`,
       comment: `${commentTxt.value}`,
     }),
@@ -22,7 +22,7 @@ const submitComment = async (e) => {
   console.log(scoreResult);
   // To update comment section
 
-  const commentRequest = new Request(`${InvBaseURL}comments?item_id=ID_${id}`);
+  const commentRequest = new Request(`${InvBaseURL}comments?item_id=${id}`);
   const commentResponse = await fetch(commentRequest);
   const showComment = await commentResponse.json();
 
