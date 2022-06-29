@@ -1,4 +1,5 @@
 import { InvBaseURL, reqStarURL } from './api_manager.js';
+import submitComment from './submitNewComment.js';
 
 const btnCommentClicked = async (e) => {
   // fetch data from API
@@ -15,15 +16,15 @@ const btnCommentClicked = async (e) => {
   modal.classList.toggle('show');
   modal.innerHTML = `
         <div class='modal-item'>
-        <img class='star-image' src='${displayStar.imageUrl}' alt='${displayStar.image}'>
         <span class='close'>&times;</span>
-        <h3>${displayStar.fullName}</h3>
+        <img class='star-image' src='${displayStar.imageUrl}' alt='${displayStar.image}'>
+        <h3 class='display-name'>${displayStar.fullName}</h3>
         <ul class="actor-details">        
         <li class="actor-id">ID_${displayStar.id}</li>
-        <li>FirstName: ${displayStar.firstName}</li>
-        <li>LastName: ${displayStar.lastName}</li>
-        <li>Title: ${displayStar.title}</li>
-        <li>Family: ${displayStar.family}</li>
+        <li class='display-firstname'>FirstName: ${displayStar.firstName}</li>
+        <li class='display-lastname'>LastName: ${displayStar.lastName}</li>
+        <li class='display-title'>Title: ${displayStar.title}</li>
+        <li class='display-family'>Family: ${displayStar.family}</li>
         </ul>
 
         <ul class='comment-section'></ul>  
@@ -40,7 +41,7 @@ const btnCommentClicked = async (e) => {
             <textarea name="comment" id="comment" placeholder="Your Insight"></textarea>
         </div>
 
-        <button type='button' id='${id}'>Comment</button>
+        <button class='btn-comment'type='button' id='ID_${id}'>Comment</button>
         <span class="message"></span>
         
 
@@ -87,6 +88,9 @@ const btnCommentClicked = async (e) => {
     modal.remove();
     overlay.remove();
   });
+
+  const submitBtn = document.getElementById(`ID_${id}`);
+  submitBtn.addEventListener('click', submitComment);
 };
 
 export default btnCommentClicked;
