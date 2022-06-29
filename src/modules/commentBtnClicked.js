@@ -1,26 +1,25 @@
-import {InvBaseURL, reqStarURL} from './api_manager.js'
+import { InvBaseURL, reqStarURL } from './api_manager.js';
 
-const btnCommentClicked = async(e) => {
-  //fetch data from API
-  let id = e.target.id;
-  
+const btnCommentClicked = async (e) => {
+  // fetch data from API
+  const { id } = e.target;
+
   const request = new Request(`${reqStarURL}${id}`);
   const response = await fetch(request);
-  const displayStar= await response.json();
+  const displayStar = await response.json();
 
-  console.log(displayStar)
-  //create modal fromthe API
-  const modalContainer = document.querySelector('article')
+  // create modal fromthe API
+  const modalContainer = document.querySelector('article');
   const modal = document.createElement('div');
-    modal.classList.add('modal')
-    modal.classList.toggle('show')
-    modal.innerHTML = `
+  modal.classList.add('modal');
+  modal.classList.toggle('show');
+  modal.innerHTML = `
         <div class='modal-item'>
-        <img src='${displayStar.imageUrl }' alt='${displayStar.image}'>
+        <img class='star-image' src='${displayStar.imageUrl}' alt='${displayStar.image}'>
         <span class='close'>&times;</span>
-        <ul class=""actor-details>
-        <li>FullName: ${displayStar.fullName}</li>
-        <li class="actor-id">ID: ${displayStar.id}</li>
+        <h3>${displayStar.fullName}</h3>
+        <ul class="actor-details">        
+        <li class="actor-id">ID_${displayStar.id}</li>
         <li>FirstName: ${displayStar.firstName}</li>
         <li>LastName: ${displayStar.lastName}</li>
         <li>Title: ${displayStar.title}</li>
@@ -41,46 +40,53 @@ const btnCommentClicked = async(e) => {
             <textarea name="comment" id="comment" placeholder="Your Insight"></textarea>
         </div>
 
-        <button type='button' id='submit'>Comment</button>
+        <button type='button' id='${id}'>Comment</button>
         <span class="message"></span>
         
 
     </form>
 
-        </div>`
+        </div>`;
 
-        modalContainer.appendChild(modal)
+  modalContainer.appendChild(modal);
 
-  //create comments dynamically
+  // create comments section dynamically
 
-  const commentRequest = new Request(`${InvBaseURL}comments?item_id=ID: ${id}`);
+  const commentRequest = new Request(`${InvBaseURL}comments?item_id=ID_${id}`);
   const commentResponse = await fetch(commentRequest);
-  const showComment= await commentResponse.json();
-  
-  let numberOfComment
-  console.log(showComment)
-  if(showComment.length === undefined){
-    numberOfComment = 0
-  }else {
-    numberOfComment = showComment.length
+  const showComment = await commentResponse.json();
+
+  let numberOfComment;
+
+  if (showComment.length === undefined) {
+    numberOfComment = 0;
+  } else {
+    numberOfComment = showComment.length;
   }
 
-        const displayComment = document.querySelector('.comment-section')
-        displayComment.innerHTML = `Comments(${numberOfComment})`
-       for (let i = 0; i < showComment.length; i+=1){ 
-        
-        const createComment = document.createElement('li');
-        createComment.classList.add('create-comment');
-        createComment.innerHTML = `${showComment[i].creation_date}  ${showComment[i].username}:  ${showComment[i].comment}`
-        displayComment.appendChild(createComment)
-       }
-        
-       const closeModal = document.querySelector('.close')
-      
+  const displayComment = document.querySelector('.comment-section');
+  const commentHeading = document.createElement('h2');
+  commentHeading.classList.add('comment-heading');
+  commentHeading.innerHTML = `Comments(${numberOfComment})`;
 
-        closeModal.addEventListener('click', () =>  modal.remove())
-        
+  displayComment.appendChild(commentHeading);
 
+  for (let i = 0; i < showComment.length; i += 1) {
+    const createComment = document.createElement('li');
+    createComment.classList.add('create-comment');
+    createComment.innerHTML = `${showComment[i].creation_date}  ${showComment[i].username}:  ${showComment[i].comment}`;
+    displayComment.appendChild(createComment);
+  }
+
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  modalContainer.appendChild(overlay);
+
+  const closeModal = document.querySelector('.close');
+  closeModal.addEventListener('click', () => {
+    modal.remove();
+    overlay.remove();
+  });
 };
 
 export default btnCommentClicked;

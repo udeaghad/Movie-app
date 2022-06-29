@@ -30,4 +30,6 @@ const loadStarList = async (callBack) => {
   callBack(StarList);
 };
 
-export { loadStarList, getLikes, postLike, InvBaseURL, reqStarURL };
+export {
+  loadStarList, getLikes, postLike, InvBaseURL, reqStarURL,
+};
