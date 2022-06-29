@@ -1,5 +1,5 @@
 import Logo from '../images/logo-32.png';
-import { loadStarList, getLikes } from './api_manager.js';
+import { loadStarList, getLikes, postLike } from './api_manager.js';
 import btnCommentClicked from './commentBtnClicked.js';
 
 const populateLikes = (starLikes) => {
@@ -9,7 +9,11 @@ const populateLikes = (starLikes) => {
 };
 
 const btnHeartClicked = (e) => {
-  alert(`Hi like button with id no ${e.target.id} is clicked`);
+  const newLike = {
+    item_id: `${e.target.id}`,
+  };
+  postLike(newLike);
+  getLikes(populateLikes);
   e.stopPropagation();
 };
 
