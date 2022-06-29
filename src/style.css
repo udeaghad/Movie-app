@@ -174,9 +174,9 @@ button:hover {
   float: right;
   font-size: 35px;
   font-weight: bold;
-  margin-right: 3%;
-  margin-top: 21px;
+  margin-right: 3%; 
   cursor: pointer;
+  
 }
 
 .close:hover {
@@ -190,7 +190,7 @@ button:hover {
 .star-image {
   height: 250px;
   width: 350px;
-  margin: 6% 10%;
+  margin-left: 30%;
 }
 
 li {
@@ -206,6 +206,7 @@ li {
   grid-template-columns: 1fr 1fr;
     gap: 14px;
     margin: 14px 0;
+    margin-left: 25%;
 }
 
 .comment-heading {
@@ -230,3 +231,6 @@ li {
   padding: 5px;
 }
 
+.create-comment {
+  margin-left: 25%;
+}

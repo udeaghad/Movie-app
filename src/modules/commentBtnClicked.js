@@ -16,8 +16,8 @@ const btnCommentClicked = async (e) => {
   modal.classList.toggle('show');
   modal.innerHTML = `
         <div class='modal-item'>
-        <img class='star-image' src='${displayStar.imageUrl}' alt='${displayStar.image}'>
         <span class='close'>&times;</span>
+        <img class='star-image' src='${displayStar.imageUrl}' alt='${displayStar.image}'>
         <h3 class='display-name'>${displayStar.fullName}</h3>
         <ul class="actor-details">        
         <li class="actor-id">ID_${displayStar.id}</li>
