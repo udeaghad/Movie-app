@@ -3,7 +3,7 @@ const getList = async () => {
   const request = new Request(baseUrl);
   const response = await fetch(request);
   const result = await response.json();
-  console.log(result);
+  console.table(result);
 };
 
 export default getList;
