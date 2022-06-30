@@ -1,3 +1,5 @@
 const starCounts = (stars) => stars.length;
 
-export default starCounts;
+const commentCounter = (commentsFromApi) => commentsFromApi.length;
+
+export { starCounts, commentCounter };

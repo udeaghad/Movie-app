@@ -1,5 +1,6 @@
 import { InvBaseURL, reqStarURL } from './api_manager.js';
 import submitComment from './submitNewComment.js';
+import { commentCounter } from './counter.js';
 
 const btnCommentClicked = async (e) => {
   // fetch data from API
@@ -59,10 +60,10 @@ const btnCommentClicked = async (e) => {
 
   let numberOfComment;
 
-  if (showComment.length === undefined) {
+  if (commentCounter(showComment) === undefined) {
     numberOfComment = 0;
   } else {
-    numberOfComment = showComment.length;
+    numberOfComment = commentCounter(showComment);
   }
 
   const displayComment = document.querySelector('.comment-section');
