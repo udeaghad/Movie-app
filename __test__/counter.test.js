@@ -1,4 +1,4 @@
-import starCounts from '../src/modules/counter.js';
+import { starCounts, commentCounter } from '../src/modules/counter.js';
 
 test('Should output the total number items displayed on homepage', () => {
   const stars = [{
@@ -29,7 +29,7 @@ test('Should output the total number items displayed on homepage', () => {
     image: 'jon-snow.jpg',
     imageUrl: 'https://thronesapi.com/assets/images/jon-snow.jpg',
   }, {
-    id: 4,
+    id: 3,
     firstName: 'Sansa',
     lastName: 'Stark',
     fullName: 'Sansa Stark',
@@ -38,5 +38,21 @@ test('Should output the total number items displayed on homepage', () => {
     image: 'sansa-stark.jpeg',
     imageUrl: 'https://thronesapi.com/assets/images/sansa-stark.jpeg',
   }];
+
   expect(starCounts(stars)).toBe(4);
+});
+
+test('To test comment counter', () => {
+  const commentsFromApi = [
+    { creation_date: '2022-06-29', comment: 'Nice', username: 'James' },
+    { creation_date: '2022-06-29', comment: 'lovely', username: 'Dan' },
+    { creation_date: '2022-06-30', username: 'Killy', comment: 'Fine' },
+
+  ];
+
+  const numberOfComment = commentCounter(commentsFromApi);
+
+  document.body.innerHTML = `<h2>Comments(${numberOfComment})</h2>`;
+
+  expect(document.querySelector('h2').textContent).toBe('Comments(3)');
 });

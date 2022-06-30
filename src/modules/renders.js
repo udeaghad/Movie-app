@@ -1,7 +1,7 @@
 import Logo from '../images/logo-32.png';
 import { loadStarList, getLikes, postLike } from './api_manager.js';
 import btnCommentClicked from './commentBtnClicked.js';
-import starCounts from './counter.js';
+import { starCounts } from './counter.js';
 
 const populateLikes = (starLikes) => {
   starLikes.forEach((star, i) => {
