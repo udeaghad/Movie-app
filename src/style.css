@@ -178,7 +178,7 @@ button:hover {
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-color: black;
-  z-index: 5;
+  z-index: 5; 
 }
 
 .modal-item {

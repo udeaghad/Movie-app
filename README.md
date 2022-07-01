@@ -1,4 +1,3 @@
-[![](https://img.shields.io/badge/Micronaut-Angom%20Chittaranjan-blue)](https://github.com/udeaghad)
 [![](https://img.shields.io/badge/Microverse-Dozie%20Udeagha-blueviolet)](https://github.com/udeaghad)
 
 # JS-Group-Capstone
@@ -12,6 +11,7 @@
 - Web API
 - Javascript
 - Webpack
+- Jest
 
 ## Live Demo
 
