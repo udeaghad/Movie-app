@@ -1,4 +1,4 @@
-import Logo from '../images/logo-32.png';
+import Logo from '../images/images-logo.jpg';
 import { loadStarList, getLikes, postLike } from './api_manager.js';
 import btnCommentClicked from './commentBtnClicked.js';
 import { starCounts } from './counter.js';

@@ -2,7 +2,7 @@
 
 # JS-Group-Capstone
 
-> In this project, we build a Web App using web API, webpack and served by a webpack dev server.
+>We are building this JavaScript capstone project based on an external API. We selected an API that provides data about Game of throne movie characters and then built the webapp around it
 
 ## Built With
 
@@ -12,10 +12,7 @@
 - Javascript
 - Webpack
 
-## Live Demo
-[source code](git@github.com:AngomRanjan/JS-Group-Capstone.git)
 
-[Live Demo Link](https://angomranjan.github.io/JS-Group-Capstone/)
 
 ## Authors
 

@@ -17,21 +17,23 @@ const btnCommentClicked = async (e) => {
   modal.classList.toggle('show');
   modal.innerHTML = `
         <div class='modal-item'>
-        <span class='close'>&times;</span>
+        
+        <div class='photo-wrapper'>
         <img class='star-image' src='${displayStar.imageUrl}' alt='${displayStar.image}'>
         <h3 class='display-name'>${displayStar.fullName}</h3>
+        </div>
+
+        <div class='detail-wrapper'>
         <ul class="actor-details">        
-        <li class="actor-id">ID_${displayStar.id}</li>
-        <li class='display-firstname'>FirstName: ${displayStar.firstName}</li>
-        <li class='display-lastname'>LastName: ${displayStar.lastName}</li>
-        <li class='display-title'>Title: ${displayStar.title}</li>
-        <li class='display-family'>Family: ${displayStar.family}</li>
+        <li class="actor actor-id">ID_${displayStar.id}</li>
+        <li class='actor display-firstname'>FirstName: <span>${displayStar.firstName}</span></li>
+        <li class='actor display-lastname'>LastName: <span>${displayStar.lastName}</span></li>
+        <li class='actor display-title'>Title: <span>${displayStar.title}</span></li>
+        <li class='actor display-family'>Family: <span>${displayStar.family}</span></li>
         </ul>
 
-        <ul class='comment-section'></ul>  
-
         <form class='add-comment' action="#" method="post">
-        <h3>Add a comment</h3>
+        <h3 class='add-heading'>Add a comment</h3>
         <div class='name-field'>
             <label for="name"></label>
             <input type="text" name="name" id="name" placeHolder='Your Name'>
@@ -42,11 +44,16 @@ const btnCommentClicked = async (e) => {
             <textarea name="comment" id="comment" placeholder="Your Insight"></textarea>
         </div>
 
-        <button class='btn-comment'type='button' id='ID_${id}'>Comment</button>
-        <span class="message"></span>
-        
+        <button class='comment-btn' type='button' id='ID_${id}'>Comment</button>
+        <span class="message"></span>      
 
     </form>
+
+    </div>
+
+        <ul class='comment-section'></ul>  
+
+        <span class='close'>&times;</span>
 
         </div>`;
 
@@ -67,7 +74,7 @@ const btnCommentClicked = async (e) => {
   }
 
   const displayComment = document.querySelector('.comment-section');
-  const commentHeading = document.createElement('h2');
+  const commentHeading = document.createElement('h3');
   commentHeading.classList.add('comment-heading');
   commentHeading.innerHTML = `Comments(${numberOfComment})`;
 
@@ -76,19 +83,12 @@ const btnCommentClicked = async (e) => {
   for (let i = 0; i < showComment.length; i += 1) {
     const createComment = document.createElement('li');
     createComment.classList.add('create-comment');
-    createComment.innerHTML = `${showComment[i].creation_date}  ${showComment[i].username}:  ${showComment[i].comment}`;
+    createComment.innerHTML = `<span>${showComment[i].creation_date}</span>  <span>${showComment[i].username}:</span>  <span>${showComment[i].comment}</span>`;
     displayComment.appendChild(createComment);
   }
 
-  const overlay = document.createElement('div');
-  overlay.classList.add('overlay');
-  modalContainer.appendChild(overlay);
-
   const closeModal = document.querySelector('.close');
-  closeModal.addEventListener('click', () => {
-    modal.remove();
-    overlay.remove();
-  });
+  closeModal.addEventListener('click', () => modal.remove());
 
   const submitBtn = document.getElementById(`ID_${id}`);
   submitBtn.addEventListener('click', submitComment);
