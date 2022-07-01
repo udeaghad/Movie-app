@@ -12,19 +12,22 @@ body {
 
 a {
   text-decoration: none;
+  font-size: 20px;
 }
 
-header,
-footer {
-  padding: 5px 20px;
-  flex-wrap: wrap;
-  background-color: rgb(112, 172, 112);
+header {
+  background-image: url('./images/images-logo2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  margin: 0;
 }
 
 header,
 footer,
 .navbar {
   width: 100%;
+  height: 100px;
 }
 
 footer {
@@ -35,30 +38,41 @@ footer {
   display: flex;
   align-items: center;
   z-index: 10;
+  background-color: rgb(22, 21, 21);
+  color: whitesmoke;
+  padding: 5px 20px;
+  flex-wrap: wrap;
 }
 
 header,
 .brand,
 .navs,
 .navbar {
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   display: flex;
 }
 
 .navs {
-  gap: 20px;
+  gap: 60px;
   width: 60%;
   padding-right: 60px;
 }
 
+#logo {
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
 .navlink {
-  color: #111;
+  color: whitesmoke;
 }
 
 .brand-name {
-  font-size: 28px;
+  font-size: 35px;
   padding: 0 10px;
+  color: whitesmoke;
 }
 
 #throne-stars {
@@ -73,28 +87,38 @@ header,
 
 main {
   justify-content: space-around;
-  width: 80%;
-  margin: 10px auto;
-  display: flex;
-  gap: 70px;
-  flex-wrap: wrap;
+  padding-top: 30px;
   padding-bottom: 60px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-image: url('./images/page-bg.jpg');
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 .img-stars {
-  width: 235px;
+  width: 280px;
   height: 260px;
+  margin: 10px;
 }
 
 .card-title {
   font-size: 16px;
   width: fit-content;
+  color: whitesmoke;
 }
 
 .stars {
   display: flex;
   flex-direction: column;
-  background-color: cornflowerblue;
+  background-color: #261e1d;
+  border: 1px solid rgb(22, 21, 21);
+}
+
+.stars:hover {
+  box-shadow: 1px 1px 10px 3px #fff190;
+  background-color: #b9540c;
 }
 
 .ct-ph {
@@ -126,6 +150,7 @@ button:hover {
 .likes {
   text-align: right;
   margin-right: 10px;
+  color: whitesmoke;
 }
 
 .btn-comment {
@@ -136,33 +161,37 @@ button:hover {
   border: 1px solid #fff;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(0 0 0 / 90%);
-  background-color: rgb(187, 187, 250);
+  background-color: #beb8af;
 }
 
 .modal {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   top: 0;
   right: -100%;
   position: fixed;
   height: 100vh;
-  background-color: rgb(193, 214, 252);
   overflow: auto;
-  padding: 8%;
-  margin-right: 10%;
+  background-image: url('./images/images-logo2.jpg');
+  background-position-x: right;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-color: black;
   z-index: 5;
 }
 
-.overlay {
-  position: fixed;
-  overflow: auto;
-  top: 0;
-  left: 0;
+.modal-item {
   width: 100%;
   height: 100%;
-  background-color: whitesmoke;
-  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 5%;
+}
+
+.photo-wrapper {
+  margin: 10px;
+  width: 40%;
 }
 
 .show {
@@ -170,7 +199,7 @@ button:hover {
 }
 
 .close {
-  color: #aaa;
+  color: rgb(48, 47, 47);
   float: right;
   font-size: 35px;
   font-weight: bold;
@@ -179,7 +208,7 @@ button:hover {
 }
 
 .close:hover {
-  color: darkviolet;
+  color: #b9540c;
 }
 
 .no-show {
@@ -187,9 +216,10 @@ button:hover {
 }
 
 .star-image {
-  height: 250px;
-  width: 350px;
-  margin-left: 30%;
+  height: 85%;
+  width: 95%;
+  margin-top: 20px;
+  border: 3px solid #261e1d;
 }
 
 li {
@@ -198,18 +228,30 @@ li {
 
 .display-name {
   text-align: center;
+  font-size: 30px;
+  color: #b9540c;
 }
 
 .actor-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin: 14px 0;
-  margin-left: 25%;
+  border: 1px solid black;
+  margin-top: 10%;
+  height: 40%;
+  padding: 2px;
+  overflow: auto;
+}
+
+.actor {
+  font-size: 20px;
+  margin: 10px;
+  color: #fcfef0;
+  display: flex;
+  gap: 15px;
 }
 
 .comment-heading {
-  text-align: center;
+  margin-top: 5%;
+  color: #b9540c;
+  margin-left: 5%;
 }
 
 .add-comment {
@@ -218,18 +260,56 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 6px;
+  height: 50%;
+}
+
+.add-heading {
+  color: #b9540c;
+  font-size: 24px;
 }
 
 #name,
 #comment {
   width: 100%;
   font-size: 24px;
-  border: 1px solid whitesmoke;
+  border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+#comment {
+  height: 12rem;
 }
 
 .create-comment {
-  margin-left: 25%;
+  margin-left: 5%;
+  margin-top: 5%;
+  color: #fcfef0;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.comment-section {
+  overflow: auto;
+  border: 1px solid black;
+  height: 80%;
+  width: 25%;
+  margin-top: 3%;
+}
+
+.name-field,
+.text-field {
+  width: 100%;
+}
+
+.comment-btn {
+  height: 28px;
+  width: 60%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 90%);
+  background-color: #beb8af;
 }

@@ -36,7 +36,7 @@ const submitComment = async (e) => {
 
     const addNewComment = document.createElement('li');
     addNewComment.classList.add('create-comment');
-    addNewComment.innerHTML = `${showComment[len].creation_date} ${showComment[len].username}: ${showComment[len].comment}`;
+    addNewComment.innerHTML = `<span>${showComment[len].creation_date}</span> <span>${showComment[len].username}:</span> <span>${showComment[len].comment}</span>`;
 
     commentSection.appendChild(addNewComment);
 
