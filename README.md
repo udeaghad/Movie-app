@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/Micronaut-Angom%20Chittaranjan-blue)](https://github.com/AngomRanjan)
+[![](https://img.shields.io/badge/Microverse-Dozie%20Udeagha-blueviolet)](https://github.com/udeaghad)
 
 # JS-Group-Capstone
 
@@ -11,7 +11,33 @@
 - Web API
 - Javascript
 - Webpack
+- Jest
 
+## Live Demo
+
+https://udeaghad.github.io/Javascript-Capston-API-web/dist/
+
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+
+Prerequisites: 
+   - Signup/login to your github account and go to https://github.com/udeaghad/Javascript-Capston-API-web/.
+   
+Setup
+   - Clone the repository on github to your local terminal
+Install
+   - Ensure you have git installed on your terminal
+   - Run each of the following codes on your terminal
+      -  npm install
+      -  npm run build
+      -  npm start
+   -Ensure you have node.js installed.
+  
+Usage
+   - Open the index.html file with your browser to view the webpage
 
 
 ## Authors
@@ -32,21 +58,12 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/AngomRanjan/JS-Group-Capstone/issues).
+Feel free to check the [issues page](https://github.com/udeaghad/Javascript-Capston-API-web/issues).
 
 ## Show your support
 
-Give a [⭐️](https://github.com/AngomRanjan/JS-Group-Capstone/stargazers) if you like this project!
+Give a [⭐️](https://github.com/udeaghad/Javascript-Capston-API-web/stargazers) if you like this project!
 
-## :footprints: Track Me
-
-<a href="https://twitter.com/RanjanAngom?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">
-<img src="https://img.shields.io/badge/-@RanjanAngom-blue?style=flat&logo=twitter&logoColor=white">
-</a>
-
-<a class="github-button" href="https://github.com/AngomRanjan" aria-label="Follow @AngomRanjan on GitHub">
- <img src="https://img.shields.io/badge/-@AngomRanjan-green?style=flat&logo=github&logoColor=white">
-</a>
 
 ## Acknowledgments
 - Microverse Team
@@ -54,4 +71,3 @@ Give a [⭐️](https://github.com/AngomRanjan/JS-Group-Capstone/stargazers) if 
 
 ## 📝 License
 
-This project is [MIT](LICENSE) licensed.
