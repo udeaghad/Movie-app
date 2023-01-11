@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/Microverse-Dozie%20Udeagha-blueviolet)](https://github.com/udeaghad)
 
-# JS-Group-Capstone
+# Movie App
 
 >We are building this JavaScript capstone project based on an external API. We selected an API that provides data about Game of throne movie characters and then built the webapp around it
 
