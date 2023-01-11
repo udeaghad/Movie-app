@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-https://udeaghad.github.io/Javascript-Capston-API-web/dist/
+https://game-of-throne-movie.netlify.app/
 
 
 ## Getting Started
